@@ -12,7 +12,7 @@ const UnAuthHome = () => {
     const webAuth = new WebAuth({
                           domain: process.env.REACT_APP_AUTH_DOMAIN as string,
                           clientID: process.env.REACT_APP_CLIENT_ID as string,
-                          redirectUri: `http://localhost:3000/guestLogin`,
+                          redirectUri: `https://message-frontend.web.app/guestLogin`,
                           responseType: 'code'
                       })
 

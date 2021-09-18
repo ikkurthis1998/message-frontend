@@ -30,7 +30,7 @@ const ChatBox = () => {
             setLoading(true);
             try {
                 // await dbConnect();
-                const response = await fetch("https://message-backend-r8.herokuapp.com/publicChats");
+                const response = await fetch(process.env.REACT_APP_BACKEND_URL as string);
                 const publicChats = await response.json();
                 // console.log(response);
                 setChat(publicChats);
