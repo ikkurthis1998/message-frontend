@@ -30,7 +30,7 @@ const ChatBox = () => {
             setLoading(true);
             try {
                 // await dbConnect();
-                const response = await fetch("http://localhost:3000/publicChats");
+                const response = await fetch("https://message-backend-r8.herokuapp.com/publicChats");
                 const publicChats = await response.json();
                 // console.log(response);
                 setChat(publicChats);
