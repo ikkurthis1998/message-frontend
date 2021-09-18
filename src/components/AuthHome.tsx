@@ -24,7 +24,7 @@ const AuthHome = () => {
                 {/* {nameProcess ? <input type="text" defaultValue={user.name} onChange={(e) => setuserName(e.target.value)} /> : <p>{user.name}</p>}
                 {nameProcess ? <button onClick={() => saveName()}>Save</button> : <button onClick={() => setName()}>update name</button>} */}
                 <p className="font-bold text-2xl">{user.name}</p>
-                <button onClick={() => logout({ returnTo: "https://message-frontend.web.app" })}>Log Out</button>
+                <button onClick={() => logout({ returnTo: "https://message-r8.netlify.app/" })}>Log Out</button>
                 {/* <div className="bg-white flex flex-col justify-start items-center mobile-sm:w-full tablet:w-3/12 rounded-lg">
                     <div>
                         <img src={user.picture} alt={user.name} />
