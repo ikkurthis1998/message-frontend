@@ -1,23 +1,23 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { WebAuth } from 'auth0-js';
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 
 const UnAuthHome = () => {
 
     const { loginWithRedirect, isLoading } = useAuth0();
 
-    const history = useHistory();
+    // const history = useHistory();
 
     const webAuth = new WebAuth({
                           domain: process.env.REACT_APP_AUTH_DOMAIN as string,
                           clientID: process.env.REACT_APP_CLIENT_ID as string,
-                          redirectUri: `https://message-r8.netlify.app/#guestLogin`,
+                          redirectUri: `https://message-r8.netlify.app/`,
                           responseType: 'code'
                       })
 
     const guestLogin = async () => {
-        await webAuth.login({
+        webAuth.login({
         email: "test@test.com",
         password: "test123T@",
         realm: "Username-Password-Authentication"
@@ -27,7 +27,7 @@ const UnAuthHome = () => {
         }
         console.log(result);
         });
-        history.push('/#guestLogin');
+        // history.push('/guestLogin');
     }
 
     return (
@@ -48,7 +48,7 @@ const UnAuthHome = () => {
             {!isLoading && <>
                 <button className="mobile-sm:w-28 h-10 mobile-sm:text-base text-white font-bold bg-blue hover:bg-blue-600 rounded-lg mb-5" onClick={() => loginWithRedirect()}>Lets Go!</button>
                 <button className="mobile-sm:w-28 h-10 mobile-sm:text-base text-white font-bold bg-blue hover:bg-blue-600 rounded-lg mb-5" onClick={async () => await guestLogin()}>Guest login*</button>
-                <p className="text-red-500">*If you are opting for guest login,<br/> please make sure cookies are allowed.</p>
+                <p className="text-red-500">*If you are opting for guest login,<br/> please make sure cookies are allowed and click "Lets Go!" after clicking "Guest login".</p>
             </>}
         </div>
     )

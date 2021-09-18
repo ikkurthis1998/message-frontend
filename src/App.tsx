@@ -1,5 +1,5 @@
 import './App.css';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import UnAuthHome from './components/UnAuthHome';
 import { useAuth0 } from "@auth0/auth0-react";
 import AuthHome from './components/AuthHome';
@@ -10,7 +10,7 @@ function App() {
   const { isAuthenticated } = useAuth0();
 
   return (
-    <HashRouter hashType="noslash">
+    <Router>
       <div className="App">
         
         <Route exact path="/">
@@ -25,7 +25,7 @@ function App() {
         </Route>
 
       </div>
-    </HashRouter>
+    </Router>
   );
 }
 
