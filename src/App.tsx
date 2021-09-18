@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, HashRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import UnAuthHome from './components/UnAuthHome';
 import { useAuth0 } from "@auth0/auth0-react";
 import AuthHome from './components/AuthHome';
