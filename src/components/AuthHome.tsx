@@ -20,7 +20,7 @@ const AuthHome = () => {
 
     if (user) {
         return (
-            <div className="flex flex-col justify-start items-center w-screen h-screen rounded-lg py-10 box-border bg-blue">
+            <div className="flex flex-col justify-start items-center w-screen h-screen rounded-lg py-5 box-border bg-blue">
                 {/* {nameProcess ? <input type="text" defaultValue={user.name} onChange={(e) => setuserName(e.target.value)} /> : <p>{user.name}</p>}
                 {nameProcess ? <button onClick={() => saveName()}>Save</button> : <button onClick={() => setName()}>update name</button>} */}
                 <p className="font-bold text-2xl">{user.name}</p>
