@@ -40,14 +40,14 @@ const ChatBox = () => {
         }
 
         getPublicChats().then(() => {
-            console.log("Yes");
+            // console.log("Yes");
             setLoading(false);
         });
         
     }, []);
 
     socket.on("public", (payload) => {
-            console.log(payload);
+            // console.log(payload);
             setChat([...chat, payload]);
             scrollToRef(myRef);
         });
