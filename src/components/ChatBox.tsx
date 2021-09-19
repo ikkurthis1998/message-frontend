@@ -42,6 +42,7 @@ const ChatBox = () => {
         getPublicChats().then(() => {
             // console.log("Yes");
             setLoading(false);
+            scrollToRef(myRef);
         });
         
     }, []);
