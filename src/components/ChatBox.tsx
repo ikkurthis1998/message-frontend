@@ -53,7 +53,7 @@ const ChatBox = () => {
         });
 
     return (
-        <div className="w-96 h-full flex-grow border flex flex-col justify-end bg-gray-200 rounded m-5 box-border">
+        <div className="w-96 flex-grow border flex flex-col justify-end bg-gray-200 rounded m-5 box-border">
             <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-gray-200 flex flex-col p-2">
                 {chat.map((payload, index) => {
                     let shortOptions: Intl.DateTimeFormatOptions = { hour: "2-digit", minute: "2-digit" };
@@ -72,7 +72,7 @@ const ChatBox = () => {
                 <input required className="flex-grow px-2 h-10 focus:outline-none focus:border-transparent rounded" type="text" value={message} onChange={(e) => {
                     setMessage(e.target.value);
                 }} />
-                <button type="submit" className="w-14 border bg-green-300 border border-green-300 rounded" >Send</button>
+                <button type="submit" className="w-20 border bg-green-300 border border-green-300 rounded" >Send</button>
             </form>
         </div>
     )
