@@ -68,7 +68,7 @@ const ChatBox = () => {
                 })}
                 <div ref={myRef}>{ loading ? "Loading..." : "" }</div>
             </div>
-            <form onSubmit={(e) => sendMessage(e)} className="mb-1 flex mx-2">
+            <form onSubmit={(e) => sendMessage(e)} className="mb-5 flex mx-2">
                 <input required className="flex-grow px-2 h-10 focus:outline-none focus:border-transparent rounded" type="text" value={message} onChange={(e) => {
                     setMessage(e.target.value);
                 }} />
