@@ -31,7 +31,7 @@ const UnAuthHome = () => {
     // }
 
     return (
-        <div className="bg-white flex flex-col justify-center items-center mobile-sm:w-4/6 tablet:w-96 h-96 rounded-lg">
+        <div className="bg-white flex flex-col justify-evenly items-center mobile-sm:w-5/6 tablet:w-96 h-96 rounded-lg p-10">
             <img
                 className="w-20"
                 alt="message"
@@ -41,12 +41,12 @@ const UnAuthHome = () => {
             {isLoading && <>
                     <p className="mb-5">Hold up a minute there...</p>
                     <div className=" flex justify-center items-center">
-                        <div className="animate-spin rounded-full h-28 w-28 border-b-2 border-gray-900"></div>
+                        <div className="animate-spin rounded-full h-20 w-20 border-b-2 border-gray-900"></div>
                     </div>
                 </>
             }
             {!isLoading && <>
-                <button className="mobile-sm:w-28 h-10 mobile-sm:text-base text-white font-bold bg-blue hover:bg-blue-600 rounded-lg mb-5" onClick={() => loginWithRedirect()}>Lets Go!</button>
+                <button className="mobile-sm:w-28 h-10 mobile-sm:text-base text-white font-bold bg-blue hover:bg-blue-600 rounded-lg" onClick={() => loginWithRedirect()}>Lets Go!</button>
                 {/* <button className="mobile-sm:w-28 h-10 mobile-sm:text-base text-white font-bold bg-blue hover:bg-blue-600 rounded-lg mb-5" onClick={async () => await guestLogin()}>Guest login*</button> */}
                 {/* <p className="text-red-500">*If you are opting for guest login,<br/> please make sure cookies are allowed and click "Lets Go!" after clicking "Guest login".</p> */}
             </>}
