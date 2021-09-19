@@ -30,7 +30,7 @@ const ChatBox = () => {
             setLoading(true);
             try {
                 // await dbConnect();
-                const response = await fetch(process.env.REACT_APP_BACKEND_URL as string);
+                const response = await fetch("https://message-backend-r8.herokuapp.com/publicChats");
                 const publicChats = await response.json();
                 // console.log(response);
                 setChat(publicChats);
@@ -47,13 +47,13 @@ const ChatBox = () => {
     }, []);
 
     socket.on("public", (payload) => {
-            // console.log("hello");
+            console.log(payload);
             setChat([...chat, payload]);
             scrollToRef(myRef);
         });
 
     return (
-        <div className="w-96 flex-grow border flex flex-col justify-end bg-gray-200 rounded m-5 box-border">
+        <div className="w-96 h-full flex-grow border flex flex-col justify-end bg-gray-200 rounded m-5 box-border">
             <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-gray-200 flex flex-col p-2">
                 {chat.map((payload, index) => {
                     let shortOptions: Intl.DateTimeFormatOptions = { hour: "2-digit", minute: "2-digit" };
