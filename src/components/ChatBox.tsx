@@ -53,7 +53,7 @@ const ChatBox = () => {
         });
 
     return (
-        <div className="w-96 h-5/6 border flex flex-col justify-end bg-gray-200 rounded m-5">
+        <div className="w-96 h-full flex-grow border flex flex-col justify-end bg-gray-200 rounded m-5">
             <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-gray-200 flex flex-col p-2">
                 {chat.map((payload, index) => {
                     let shortOptions: Intl.DateTimeFormatOptions = { hour: "2-digit", minute: "2-digit" };

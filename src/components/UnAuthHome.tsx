@@ -31,7 +31,7 @@ const UnAuthHome = () => {
     // }
 
     return (
-        <div className="bg-white flex flex-col justify-evenly items-center mobile-sm:w-5/6 tablet:w-96 h-96 rounded-lg p-10">
+        <div className="bg-white flex flex-col justify-evenly items-center mobile-sm:w-11/12 tablet:w-96 h-96 rounded-lg p-10">
             <img
                 className="w-20"
                 alt="message"
