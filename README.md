@@ -1,6 +1,6 @@
 # message-frontend
 
-Global messaging app, login/signup and send your message for everyone to see.
+Global messaging app, login/signup and broadcast your message for everyone to see.
 
 Live link: https://message-r8.netlify.app/
 
